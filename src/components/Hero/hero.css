@@ -1,0 +1,263 @@
+#hero {
+    height: 100vh;
+    width: 100%;
+    max-width: 90rem;
+    /* Increased from 75rem to allow more content width */
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.heroContainer {
+    height: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    position: relative;
+    z-index: 5;
+    /* Above background logo */
+}
+
+.heroTitle {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+
+.heroSubtitle {
+    font-size: 1.75rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    line-height: 1.3;
+}
+
+.heroDescription {
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    color: #b3b3b3;
+    max-width: 40rem;
+}
+
+.heroLogoBackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    /* Pin to the very top */
+    overflow: hidden;
+    pointer-events: none;
+    /* Smoothly fade logo edges into the background */
+    -webkit-mask-image: radial-gradient(circle at center, black 30%, transparent 90%);
+    mask-image: radial-gradient(circle at center, black 30%, transparent 90%);
+}
+
+.logoBgImage {
+    width: 100%;
+    height: 100%;
+    max-width: 98%;
+    max-height: 98%;
+    object-fit: contain;
+    transform: translateY(-15%);
+    mix-blend-mode: screen;
+    opacity: 0.2;
+    filter: brightness(0.8) contrast(1.1);
+    /* Sharpens blacks to ensure deep transparency */
+    transition: opacity 0.5s ease, filter 0.5s ease, transform 0.5s ease;
+}
+
+.heroSection:hover .logoBgImage {
+    opacity: 0.35;
+    filter: brightness(1.1) contrast(1.1);
+    transform: translateY(-15%) scale(1.03);
+}
+
+.mouseLightOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: radial-gradient(circle at var(--mouse-x) var(--mouse-y),
+            rgba(243, 156, 18, 0.4) 0%,
+            rgba(243, 156, 18, 0.1) 30%,
+            transparent 70%);
+    opacity: var(--show-light);
+    transition: opacity 0.3s ease;
+    mix-blend-mode: color-dodge;
+    z-index: 2;
+}
+
+.heroImage {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    object-fit: contain;
+    height: 100%;
+    width: auto;
+    pointer-events: none;
+    filter: drop-shadow(-10px 0 20px rgba(0, 0, 0, 0.5));
+    /* Seamlessly fade portrait edges to hide hard borders */
+    -webkit-mask-image: linear-gradient(to left, black 85%, transparent 100%),
+        linear-gradient(to top, black 85%, transparent 100%),
+        linear-gradient(to bottom, black 85%, transparent 100%);
+    mask-image: linear-gradient(to left, black 85%, transparent 100%),
+        linear-gradient(to top, black 85%, transparent 100%),
+        linear-gradient(to bottom, black 85%, transparent 100%);
+    -webkit-mask-composite: source-in;
+    mask-composite: intersect;
+}
+
+.iconRow {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1rem;
+    position: relative;
+    z-index: 10;
+}
+
+.iconButton {
+    font-size: 2rem;
+    color: #f39c12;
+    transition: transform 0.3s ease;
+}
+
+.iconButton:hover {
+    transform: scale(1.2);
+}
+
+.buttonRow {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    position: relative;
+    z-index: 10;
+}
+
+.heroBtn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 2rem;
+    background: linear-gradient(to right, rgba(128, 128, 128, 0.6), rgba(192, 192, 192, 0.6));
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.3s ease, opacity 0.3s ease;
+}
+
+.heroBtn:hover {
+    background: linear-gradient(to right, rgba(128, 128, 128, 0.8), rgba(192, 192, 192, 0.8));
+}
+
+.icon {
+    font-size: 1.2rem;
+}
+
+.heroName {
+    color: #f39c12;
+}
+
+.typingCursor {
+    font-weight: 200;
+    margin-left: 2px;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+
+    from,
+    to {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+.heroHello {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 0.5rem;
+}
+
+@media screen and (max-width: 1100px) {
+    .heroImage {
+        right: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0.5;
+        /* Fade portrait so text/logo is cleaner */
+    }
+
+    .heroLogoBackground {
+        left: 0;
+        width: 100%;
+        opacity: 0.5;
+    }
+
+    .heroTitle {
+        font-size: 2.2rem;
+    }
+
+    .heroSubtitle {
+        font-size: 1.3rem;
+    }
+
+    .heroContainer {
+        font-size: 10vw;
+        padding: 1.5rem;
+        position: relative;
+        z-index: 10;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #hero {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+    }
+
+    .heroContainer {
+        padding: 1rem;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        position: relative;
+        z-index: 10;
+    }
+
+    .heroImage {
+        display: none;
+    }
+
+    .heroLogoBackground {
+        width: 100%;
+        left: 0;
+    }
+
+    .iconRow,
+    .buttonRow {
+        justify-content: center;
+    }
+}

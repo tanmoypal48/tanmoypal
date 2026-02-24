@@ -1,0 +1,221 @@
+/* Base Navbar */
+.navbar {
+  background: rgb(30, 30, 30);
+  height: 5rem;
+  width: 100%;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+  font-family: inherit;
+  user-select: none;
+}
+
+.logoLink {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+/* Logo */
+.logo {
+  height: 4rem;
+  width: auto;
+  min-width: 4rem;
+  object-fit: contain;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover,
+.logo:focus {
+  transform: scale(1.05);
+  outline: none;
+}
+
+/* Desktop Menu */
+.desktopMenu {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 0.03em;
+  color: white;
+}
+
+.desktopMenuListItem {
+  margin: 1rem;
+  cursor: pointer;
+  padding-bottom: 0.5rem;
+  position: relative;
+  transition: color 0.25s ease;
+}
+
+.desktopMenuListItem:hover,
+.desktopMenuListItem:focus {
+  color: #E4951E;
+  outline: none;
+}
+
+.desktopMenuListItem::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: #E4951E;
+  transition: width 0.25s ease;
+  border-radius: 2px;
+}
+
+.desktopMenuListItem:hover::after,
+.desktopMenuListItem:focus::after,
+.desktopMenuListItem.active::after {
+  width: 100%;
+}
+
+.active {
+  color: #E4951E;
+}
+
+/* Button */
+.desktopMenuBtn {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(128, 128, 128, 0.6));
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 0.6rem 1.5rem;
+  border-radius: 2rem;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background 0.25s ease, color 0.25s ease, box-shadow 0.25s ease, opacity 0.25s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  user-select: none;
+}
+
+.desktopMenuBtn:hover,
+.desktopMenuBtn:focus {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(128, 128, 128, 0.8));
+  color: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+  outline: none;
+}
+
+.desktopMenuIcon {
+  height: 1.1rem;
+  width: 1.1rem;
+}
+
+/* Mobile Menu Toggle */
+.mobileMenuIcon {
+  display: none;
+  cursor: pointer;
+  color: white;
+  background: none;
+  border: none;
+  padding: 0.3rem;
+  transition: color 0.25s ease;
+}
+
+.mobileMenuIcon:hover,
+.mobileMenuIcon:focus {
+  color: #E4951E;
+  outline: none;
+}
+
+/* Mobile Dropdown Menu */
+.mobileMenu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 5rem;
+  right: 1.5rem;
+  background: rgb(40, 40, 40);
+  min-width: 16rem;
+  max-height: 60vh;
+  overflow-y: auto;
+  z-index: 1500;
+  padding: 1rem 0;
+  border-radius: 1rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.8);
+  user-select: none;
+}
+
+.mobileMenuListItem {
+  padding: 0.75rem 2.5rem;
+  margin: 0.15rem 1.5rem;
+  text-align: center;
+  color: white;
+  background: rgb(30, 30, 30);
+  border-radius: 0.6rem;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.mobileMenuListItem:hover,
+.mobileMenuListItem:focus {
+  background-color: #2a2a2a;
+  color: #E4951E;
+  outline: none;
+}
+
+/* Tablet & Mobile Responsive (≤1024px) */
+@media (max-width: 1024px) {
+
+  .desktopMenu,
+  .desktopMenuBtn {
+    display: none;
+  }
+
+  .mobileMenuIcon {
+    display: block;
+  }
+
+  .mobileMenuListItem {
+    font-size: 1rem;
+  }
+}
+
+/* Mobile Specific Adjustments (≤720px) */
+@media (max-width: 720px) {
+  .mobileMenuListItem {
+    padding: 0.75rem 2rem;
+    margin: 0.2rem 1.2rem;
+  }
+}
+
+/* Extra Small Screens (≤400px) */
+@media (max-width: 400px) {
+  .navbar {
+    padding: 0 1rem;
+  }
+
+  .mobileMenu {
+    right: 1rem;
+    min-width: 14rem;
+  }
+
+  .mobileMenuListItem {
+    font-size: 0.9rem;
+    padding: 0.7rem 1.5rem;
+    margin: 0.1rem 1rem;
+  }
+
+  .logo {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+}

@@ -1,0 +1,234 @@
+.projects-section {
+    padding: 4rem 1rem;
+    background: rgb(30, 30, 30);
+    color: #fff;
+    width: 100%;
+    max-width: 75rem;
+    margin: 0 auto;
+}
+
+.projects-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.projects-divider {
+    height: 2px;
+    width: 5rem;
+    background-color: #e4951e;
+}
+
+.projects-title {
+    background: white;
+    padding: 0.5rem 2.5rem;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    margin: 0 1rem;
+    color: rgb(30, 30, 30);
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+.projects-description {
+    text-align: center;
+    font-size: 1.05rem;
+    color: #ccc;
+    margin: 0 auto 2rem;
+    max-width: 60rem;
+    line-height: 1.6;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-category-badge {
+    display: inline-block;
+    background: rgba(228, 149, 30, 0.1);
+    color: #e4951e;
+    padding: 0.25rem 0.75rem;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(228, 149, 30, 0.3);
+}
+
+.project-card {
+    position: relative;
+    background: #111111;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.project-image {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: contain;
+    border-radius: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.project-name {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #e4951e;
+    margin-bottom: 0.5rem;
+}
+
+.project-description {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #ccc;
+}
+
+.project-tools {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 3rem;
+}
+
+.tool {
+    background: rgb(54, 54, 54);
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+}
+
+.project-card-links {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.github-link,
+.demo-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    color: #e4951e;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.github-link:hover,
+.demo-link:hover {
+    color: #fff;
+}
+
+.no-projects {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #888;
+    padding: 3rem;
+    font-style: italic;
+}
+
+@media (min-width: 1024px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .projects-section {
+        padding: 2.5rem 1rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    }
+
+    .project-card {
+        padding: 0.8rem;
+    }
+
+    .projects-description {
+        font-size: 0.9rem;
+        padding: 0 1rem;
+    }
+
+    .project-image {
+        margin-bottom: 0.8rem;
+    }
+
+    .project-name {
+        font-size: 0.9rem;
+    }
+
+    .project-description {
+        font-size: 0.8rem;
+    }
+
+    .tool {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .projects-section {
+        padding: 2rem 1rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card {
+        padding: 0.6rem;
+    }
+
+    .projects-title {
+        font-size: 1rem;
+    }
+
+    .projects-description {
+        font-size: 0.8rem;
+        padding: 0 0.5rem;
+        line-height: 1.5;
+    }
+
+    .project-image {
+        margin-bottom: 0.6rem;
+    }
+
+    .project-name {
+        font-size: 0.8rem;
+    }
+
+    .project-description {
+        font-size: 0.75rem;
+    }
+
+    .tool {
+        padding: 0.2rem 0.5rem;
+        font-size: 0.65rem;
+    }
+}

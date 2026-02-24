@@ -1,0 +1,116 @@
+.aboutSection {
+  padding: 4rem 2rem;
+  width: 100%;
+  max-width: 75rem;
+  margin: 0 auto;
+  color: #f8f9fa;
+}
+
+.aboutContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.aboutText {
+  flex: 1;
+  text-align: center;
+}
+
+.aboutHeading {
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: #f39c12;
+  margin-bottom: 1rem;
+}
+
+.aboutDescription {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #e0e0e0;
+  max-width: 42rem;
+  margin: 0 auto;
+  text-align: center; /* Default for screens <1024px */
+}
+
+.aboutImageContainer {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutImage {
+  width: 280px;
+  height: 280px;
+  border-radius: 12px;
+  object-fit: cover;
+  transition: transform 0.4s ease, filter 0.4s ease;
+  filter: grayscale(100%);
+}
+
+.aboutImage:hover {
+  transform: scale(1.05);
+  filter: grayscale(0);
+}
+
+/* Large Screens (≥1024px) */
+@media screen and (min-width: 1024px) {
+  .aboutContainer {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .aboutText {
+    text-align: left;
+  }
+
+  .aboutHeading {
+    font-size: 3rem;
+  }
+
+  .aboutDescription {
+    font-size: 1.15rem;
+    text-align: justify;
+  }
+}
+
+/* Tablets (≤768px) */
+@media screen and (max-width: 768px) {
+  .aboutHeading {
+    font-size: 2.25rem;
+  }
+
+  .aboutDescription {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .aboutImage {
+    width: 240px;
+    height: 240px;
+  }
+
+  .aboutImageContainer img {
+    filter: none;
+  }
+}
+
+/* Mobiles (≤480px) */
+@media screen and (max-width: 480px) {
+  .aboutHeading {
+    font-size: 1.85rem;
+  }
+
+  .aboutDescription {
+    font-size: 0.9rem;
+  }
+
+  .aboutImage {
+    width: 180px;
+    height: 180px;
+  }
+}
