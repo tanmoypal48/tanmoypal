@@ -1,35 +1,36 @@
-# Yoonus Ajward Portfolio Website
+# Tanmoy Pal Portfolio Website
 
 ## 📖 Overview
 
-The **Yoonus Ajward Portfolio Website** is a personal project that showcases my journey as a software engineer and web developer. The site highlights my technical expertise, projects, and professional achievements, providing visitors with an interactive and modern experience.
+The **Tanmoy Pal Portfolio Website** is a professional showcase of my journey as a **Senior Technical Product Manager and Engineer**. With over 5 years of experience in **AI, Industrial Robotics, and Digital Transformation**, this site highlights my technical expertise, high-impact industrial projects, and leadership in deploying multi-million dollar solutions.
 
 ---
 
 ## 🖥️ Tech Stack
 
-- **Frontend Framework:** React
-- **Styling:** CSS
-- **Icons:** Font Awesome, React Icons
-- **Routing:** React Router
+- **Frontend:** React.js, CSS
+- **Icons:** React Icons, Font Awesome
+- **Navigation:** React Scroll (Smooth Scrolling), React Router
 - **Email Integration:** EmailJS
+- **Deployment:** GitHub Pages
 
 ---
 
 ## 🌟 Live Demo
 
-Visit the live portfolio here: [Yoonus Ajward Portfolio](https://tanmoypal48.github.io/tanmoypal/)
+Visit the live portfolio here: [Tanmoy Pal Portfolio](https://tanmoypal48.github.io/tanmoypal/)
 
 ---
 
-## 🚀 Features
+## 🚀 Key Features
 
-- Personalised Homepage with Smooth Scrolling
-- Project Portfolio Section with Details and GitHub Links
-- Contact Form Integration via EmailJS
-- Responsive Design for Mobile, Tablet, and Desktop
-- Interactive User Interface with React Icons and Animations
-- Navigation with React Router
+- **Interactive Hero Section:** Features a typewriter animation and a mouse-following spotlight effect.
+- **AI & Industrial Experience:** Detailed breakdown of high-impact roles at Tata Motors, Siemens, and AVEVA.
+- **Dynamic Projects:** Showcases Case Studies and technical achievements in IIoT, Robotics, and Computer Vision.
+- **Glow-Card System:** Modern UI components with interactive hover effects for better engagement.
+- **Seamless Contact:** Integrated contact form via EmailJS and direct links to schedule 1-1 meetings via Calendly.
+- **Mentor Links:** Integration with Topmate for professional mentoring.
+- **Fully Responsive:** Optimized for desktop, tablet, and mobile viewing.
 
 ---
 
@@ -38,63 +39,52 @@ Visit the live portfolio here: [Yoonus Ajward Portfolio](https://tanmoypal48.git
 Follow these steps to set up and run the portfolio locally:
 
 ### 1. **Prerequisites**
-Ensure you have the following installed on your machine:
-- [Node.js](https://nodejs.org/) (v16+ recommended)
-- [npm](https://www.npmjs.com/) (comes with Node.js)
+Ensure you have the following installed:
+- [Node.js](https://nodejs.org/) (v16+)
+- [npm](https://www.npmjs.com/)
 
 ### 2. **Clone the Repository**
 ```bash
 git clone https://github.com/tanmoypal48/tanmoypal.git
-cd Personal-Portfolio-Website
+cd Personal-Portfolio-tanmoy-pal
 ```
 
 ### 3. **Install Dependencies**
-Run the following command to install all required dependencies:
 ```bash
 npm install
 ```
 
 ### 4. **Start the Development Server**
-Launch the application in development mode:
 ```bash
 npm start
 ```
 The application will be available at http://localhost:3000.
 
-### 5. **Build for Production**  
-To create a production build, run:
-```bash
-npm run build
-```
-The production-ready files will be available in the build folder.
-
-### 6. **Deploy to GitHub Pages**  
-To deploy the application using GitHub Pages:
+### 5. **Deploy to GitHub Pages**  
 ```bash
 npm run deploy
 ```
-This will automatically build and push the site to the gh-pages branch of your GitHub repository, making it live.
 
-## 📋 Usage Instructions
+---
 
-### 1. **Explore the Portfolio**
-- Navigate through the homepage to learn more about my skills, projects, and background.
+## 🤝 Contact & Networking
 
-### 2. **Check the Project Portfolio**
-- View detailed descriptions of my projects, along with the tools used and GitHub links.
+I am always open to discussing Product Management, AI, IIoT, and Digital Transformation.
 
-### 3. **Contact Me**
-- Use the integrated contact form to send me a message. The form is powered by EmailJS for seamless communication.
+- **LinkedIn:** [tanmoy-pal-](https://www.linkedin.com/in/tanmoy-pal-/)
+- **GitHub:** [tanmoypal48](https://github.com/tanmoypal48)
+- **Topmate:** [Book a Mentoring Session](https://topmate.io/tanmoy_pal)
+- **Calendly:** [Schedule a 1-1 Meeting](https://calendly.com/paltanmoy48)
+- **Email:** [paltanmoy48@gmail.com](mailto:paltanmoy48@gmail.com)
 
 ---
 
 ## 🤝 Contribution
 
-Contributions are welcome! Feel free to fork the repository and create pull requests to improve or add new features.
+Feel free to fork the repository and create pull requests for improvements.
 
 ---
 
-## 📞 Support
+## 📄 License
 
-For any questions or issues, please reach out to:
-
+This project is open-source and available under the MIT License.
