@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/tanmoypal/static/css/main.aa584a40.css",
+    "main.js": "/tanmoypal/static/js/main.6d8c9651.js",
+    "static/media/about-image.png": "/tanmoypal/static/media/about-image.c2e6e8d66c9e4da75d06.png",
+    "static/media/hero-image.png": "/tanmoypal/static/media/hero-image.e30b63f6102c99ba4202.png",
+    "static/media/hero-logo.png": "/tanmoypal/static/media/hero-logo.ba32831d1b4db9f337ab.png",
+    "static/media/logo_navbar.png": "/tanmoypal/static/media/logo_navbar.5e7c665c5e0c3bbaf09c.png",
+    "index.html": "/tanmoypal/index.html",
+    "main.aa584a40.css.map": "/tanmoypal/static/css/main.aa584a40.css.map",
+    "main.6d8c9651.js.map": "/tanmoypal/static/js/main.6d8c9651.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.aa584a40.css",
+    "static/js/main.6d8c9651.js"
+  ]
+}
